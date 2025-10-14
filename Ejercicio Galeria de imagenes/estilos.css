@@ -1,0 +1,141 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h4{
+  margin-top: 10px;
+  margin-left: 25px;
+}
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.maincontainer {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+header {
+  background-color: #ddd;
+  overflow: hidden; 
+  padding: 10px 0;
+}
+
+header h1 {
+  float: left;
+  margin-left: 15px; 
+}
+
+.barraBusqueda {
+  float: right;
+  margin-right: 15px; 
+}
+
+.Buscador input {
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px 0 0 5px;
+}
+
+.Buscador button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+
+}
+
+.Buscador button:hover {
+  background-color: #45a049;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #444;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px; 
+}
+
+nav ul li a:hover {
+  background-color: #666; 
+}
+
+main {
+  padding: 20px;
+}
+
+.PrincipalFotos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.fila {
+  position: relative;
+  left: 1.5%;
+}
+
+.fila img {
+  width: 100px; 
+  height: 242px;
+  padding: 10px;
+}
+
+.PrincipalFotos img {
+  float: left;
+  width: 30%;
+  margin: 1%;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.PrincipalFotos img:hover {
+  opacity: 0.9;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.PieDePagina {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.PieDePagina a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.PieDePagina a:hover {
+  color: white;
+}
+
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+}
+
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 25px;
+}
+
+#header ul {
+    list-style: none;
+    display: flex;
+      gap: 20px;
+}
+
+#header a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+
+
+#container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+#logo {
+    font-size: 80px;
+    font-weight: bold;
+    color: #202124;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form input[type="text"] {
+    width: 500px;
+    padding: 12px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+form input[type="text"]:hover,
+form input[type="text"]:focus {
+    border-color: #dfe1e5;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+}
+
+form input[type="submit"] {
+    margin: 20px 5px;
+    padding: 10px 20px;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    background: #f8f9fa;
+    font-size: 14px;
+    cursor: pointer;
+    color: #3c4043;
+}
+
+form input[type="submit"]:hover {
+    border: 1px solid #dadce0;
+    background: #f8f9fa;
+}
+
+small {
+    font-size: 13px;
+    color: #555;
+}
+
+small a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+small a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f2f2f2;
+    border-top: 1px solid #dadce0;
+    padding: 12px 25px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
