@@ -1,0 +1,188 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+#container {
+  width: 1200px;
+  height: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+
+#header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 30px;
+}
+
+#brand {
+  float: left;
+}
+
+#brand h1 a {
+  text-decoration: none;
+  color: #7b3ff7;
+  font-size: 22px;
+}
+
+
+#searchBox {
+  float: right;
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #c3e6cb, #a5d6a7);
+  
+
+}
+
+#searchBox input.text {
+  padding: 6px;
+  width: 300px;
+  border: none;
+  outline: none;
+  background-repeat: no-repeat;
+  background-image: url('../images/search.png');
+}
+
+#searchBox input.submit {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #4a148c ;
+  padding: 10px;
+  position: relative;
+}
+
+
+#menu {
+  background-color: #f9ed69;
+  overflow: hidden;
+  padding: 6px;
+}
+
+#menu ul {
+  list-style: none;
+  text-align: left;
+}
+
+#menu ul li {
+  display: inline-block;
+}
+
+#menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+#menu ul li a:hover,
+#menu ul li a.active {
+  color: #813291;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+
+#introduction {
+  background-color: #dff0d8;
+  padding: 20px 30px;
+  margin: 15px;
+  border-radius: 4px;
+}
+
+#introduction h3 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+
+.sidebar {
+  width: 45%;
+  float: left;
+  margin: 30px 20px;
+ 
+}
+
+#leftsidebar {
+  float: left;
+}
+
+#leftsidebar ul li a{
+   padding-left: 30px;
+   background-repeat: no-repeat;
+   background-image: url('../images/arrow.png');
+   background-size: contain;
+}
+
+#rightsidebar {
+  float: right;
+  
+}
+
+#rightsidebar ul li a{
+   padding-left: 30px;
+   background-repeat: no-repeat;
+   background-image: url('../images/tick.png');
+   background-size: contain;
+}
+
+.sidebar h3 {
+  color: #4a148c;
+  margin-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 5px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #7e57c2;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 1199px;
+  clear: both;
+  text-align: center;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  background: linear-gradient(to right, #e6d712, #d8d65c);
+  margin-top: 20px;
+}
+
+
+.clear {
+  clear: both;
+}
+
