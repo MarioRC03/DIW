@@ -1,23 +1,36 @@
-.pie{
-    background-color: black;
-    
+body {
+  display: flex;               /* Uso "flex" para que el contenido del body se acomode fácilmente en columnas o filas. */
+  flex-direction: column;      /* Pongo los elementos (cabecera, principal y pie) uno debajo del otro, en columna. */
+  min-height: 100vh;           /* Hago que el body ocupe al menos el alto completo de la pantalla (100% de la ventana). */
+  background-color: rgb(250, 247, 247);
+  margin: 0;                   /* Quito los márgenes por defecto del navegador para que todo quede bien alineado. */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.cabecera{
-    background-color: rgb(43, 43, 241);
-    padding: 22px;
-    text-align: center;
-    border-radius: 3px;
+.cabecera {
+  background-color: rgb(43, 43, 241); 
+  padding: 22px;                      
+  text-align: center;                 
+  border-radius: 3px;                 
+  color: rgb(2, 2, 2);                
 }
 
-body{
-    background-color: rgb(250, 247, 247);
+.principal {
+  margin: 20px auto;                 
+  background-color: white;            
+  padding: 15px; 
+  padding-right: 170px;     
+  padding-left: 40px;                 
+  max-width: 500px;                  
+  border-radius: 3px;                 
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); 
 }
 
-.principal{
-    margin-top: 20px;
-    background-color: white;
-    padding: 15px;
-    max-width:500px ;
-    border-radius: 3px;
+.pie {
+  background-color: #222;             
+  color: #ccc;                        
+  text-align: center;               
+  padding: 17px;                      
+  font-size: 12px; 
+  margin-top: auto;    /* Esta línea empuja el pie hacia abajo si el contenido principal es corto */               
 }
