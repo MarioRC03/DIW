@@ -1,36 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Registro</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
     <div class="principal">
+        <form class="formulario">
+            <h2>Formulario de Registro</h2>
 
-        <form action="" class="formulario">
-            <div class="fila1">
-                <div class="nombre">
-                    <label for="">Nombre</label>
-                    <input type="text">
+            <div class="fila fila1">
+                <div class="campo">
+                    <label>Nombre:</label>
+                    <input type="text" placeholder="Nombre">
                 </div>
-                <div class="apellidos">
-                    <label for="">Apellidos</label>
-                    <input type="text">
+                <div class="campo">
+                    <label>Apellido:</label>
+                    <input type="text" placeholder="Apellido">
                 </div>
             </div>
-            <div class="fila2">
-                <div class="email">
-                    <label for="">email</label>
-                    <input type="text">
+
+            <div class="fila fila2">
+                <div class="campo">
+                    <label>Email:</label>
+                    <input type="email" placeholder="correo@ejemplo.com">
                 </div>
-                <div class="telefono">
-                    <label for="">telefono</label>
-                    <input type="text">
+                <div class="campo">
+                    <label>Teléfono:</label>
+                    <input type="tel" placeholder="123456789">
                 </div>
+            </div>
+
+            <div class="fila fila3">
+                <div class="campo ancho">
+                    <label>Dirección:</label>
+                    <input type="text" placeholder="Dirección completa">
+                </div>
+            </div>
+
+            <div class="fila fila4">
+                <div class="campo">
+                    <label>Ciudad:</label>
+                    <select>
+                        <option>Selecciona una ciudad</option>
+                        <option>Madrid</option>
+                        <option>Barcelona</option>
+                        <option>Valencia</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>País:</label>
+                    <select>
+                        <option>Selecciona un país</option>
+                        <option>España</option>
+                        <option>México</option>
+                        <option>Argentina</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="fila fila5">
+                <div class="campo ancho">
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date">
+                </div>
+            </div>
+
+            <div class="fila fila6">
+                <div class="campo ancho">
+                    <label>Mensaje:</label>
+                    <textarea rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+            </div>
+
+            <div class="fila fila7">
+                <label class="checkbox">
+                    <input type="checkbox"> Acepto los términos y condiciones
+                </label>
+            </div>
+
+            <div class="fila fila8">
+                <button type="submit">Enviar</button>
             </div>
         </form>
     </div>
