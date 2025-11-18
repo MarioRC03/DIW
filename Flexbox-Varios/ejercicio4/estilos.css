@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1f2a55;
+    color: #000;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.principal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+
+.plan {
+    background: white;
+    width: 280px;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popular {
+    background: #6d4ea3;
+    color: white;
+    border: 3px solid #ffd200;
+}
+
+.divamarillo {
+    background: #ffd200;
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.subtitulo {
+    margin-top: -10px;
+    color: #555;
+}
+
+.popular .subtitulo {
+    color: #e0e0e0;
+}
+
+.precio {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+
+.ventajas {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.ventajas li {
+    margin: 10px 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.ventajas li::before {
+    content: "✔";
+    color: #2ecc71;
+}
+
+.ventajas .lideshabilitada {
+    opacity: 0.5;
+}
+
+.ventajas .lideshabilitada::before {
+    color: #aaa;
+}
+
+
+.boton {
+    padding: 12px 18px;
+    width: 100%;
+    background: #6d4ea3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.popular .boton.blanco {
+    background: white;
+    color: #6d4ea3;
+}
+
+
+@media (max-width: 600px) {
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 90%;
+    }
+
+    .popular {
+        order: -1; /* para que el plan profesional quede arriba como en la imagen */
+    }
+}

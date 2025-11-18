@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.principal {
+  display: flex;
+  height: 100vh;
+}
+
+
+.imagenizquierda {
+  flex: 1;
+  background-image: url('IMG/montañas.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contenidoderecha {
+  flex: 1;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.iconos {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.iconos i {
+ font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.masInformacion {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px;
+  max-width: 100px;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .principal {
+    flex-direction: column;
+  }
+
+  .imagenizquierda {
+    height: 40vh;
+    flex: none;
+  }
+
+  .contenidoderecha {
+    flex: 1;
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .perfil {
+    max-width: 100%;
+    gap: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .iconos{
+    position: static;    
+    justify-content: flex-end; 
+    margin-top: 0.5rem; 
+  }
+
+  .iconos i {
+    width: 20px;
+    height: 20px;
+  }
+}
