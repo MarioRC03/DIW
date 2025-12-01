@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.principal {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    max-width: 750px;
+    margin: auto;
+}
+
+.contenedorSecundario {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+}
+
+.img1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.divanidado {
+    background: #ffe1c8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.Anidado{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+}
+
+.imgAnidada {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+}
+
+h3 {
+    margin: 0 0 4px 0;
+}
+
+p {
+    margin: 0;
+    color: #444;
+}
