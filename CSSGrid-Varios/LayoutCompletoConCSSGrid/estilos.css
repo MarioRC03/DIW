@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    background: #1f1f1f;
+    color: white;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('IMGS/Montaña.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    justify-content: start;     
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.buscador {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.buscador input {
+    padding: 5px;
+}
+
+.buscador button {
+    padding: 5px 10px;
+}
+
+
+main {
+    flex: 1;  
+}
+
+.contenido {
+    padding: 30px;
+}
+
+
+.footer {
+    background: #1f1f1f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    gap: 10px;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        text-align: center;
+    }
+
+    .menu {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center; 
+    }
+
+    .buscador {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .buscador input {
+        width: 100%;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+}
