@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background: #eee;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.grid>div,
+.fila-noticias>div {
+    background: #c4c4c4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-rows:
+        3fr 1fr 1fr 1fr 
+        3fr 1fr 1fr 1fr;
+
+    grid-template-columns: 3fr 1fr;
+
+
+    grid-template-areas:
+        "p1 c1"
+        "p1 c2"
+        "p1 c3"
+        "n1 n2"
+
+        "p2 c4"
+        "p2 c5"
+        "p2 c6"
+        "f2 f2";
+}
+
+
+.p1 {
+    grid-area: p1;
+}
+
+.c1 {
+    grid-area: c1;
+}
+
+.c2 {
+    grid-area: c2;
+}
+
+.c3 {
+    grid-area: c3;
+}
+
+.f1 {
+    grid-area: f1;
+}
+
+.p2 {
+    grid-area: p2;
+}
+
+.c4 {
+    grid-area: c4;
+}
+
+.c5 {
+    grid-area: c5;
+}
+
+.c6 {
+    grid-area: c6;
+}
+
+.f2 {
+    grid-area: f2;
+}
