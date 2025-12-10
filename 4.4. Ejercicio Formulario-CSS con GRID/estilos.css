@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fafafa;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.form-section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    background: white;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.form-section h2 {
+    font-size: 0.9rem;
+    background: #efefef;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+p,
+li {
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 4px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sector li,
+.form-section li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+#botones {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #666;
+    background: #eaeaea;
+    border-radius: 4px;
+}
+
+#enviar {
+    background: #0a64f0;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 480px) {
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .form-section {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .form-section h2 {
+        font-size: 0.85rem;
+    }
+
+    #botones {
+        text-align: center;
+    }
+
+}
