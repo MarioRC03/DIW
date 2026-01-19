@@ -1,0 +1,52 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(238, 234, 234);
+}
+.principal {
+    max-width: 1140px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #2aa4df;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-item:nth-child(2) {
+    background: #1b86bb;
+}
+
+.menu-item:nth-child(3) {
+    background: #0f5f85;
+}
+
+.menu-item i {
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.menu-item:hover {
+    background: #0b4d6b;
+    color: #fff;
+}
+
+.separador {
+    border: none;
+    height: 2px;
+    background: #2aa4df;
+    margin: 20px 0;
+}
+
+#portfolio h2 {
+    color: #2aa4df;
+    font-weight: 300;
+}
