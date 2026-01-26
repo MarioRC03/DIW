@@ -3,7 +3,7 @@ body {
     background-color: rgb(238, 234, 234);
 }
 .principal {
-    max-width: 1140px; 
+    max-width: 1040px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,4 +49,34 @@ body {
 #portfolio h2 {
     color: #2aa4df;
     font-weight: 300;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.social-icon.twitter {
+    background-color: #1DA1F2;
+}
+
+.social-icon.instagram {
+    background-color: #8a3ab9;
+}
+
+.social-icon.facebook {
+    background-color: #1877F2;
 }
