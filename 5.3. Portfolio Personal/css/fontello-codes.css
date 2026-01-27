@@ -1,4 +1,7 @@
 
-.icon-mail:before { content: '\e800'; } /* '' */
-.icon-briefcase:before { content: '\e801'; } /* '' */
-.icon-user:before { content: '\e808'; } /* '' */
+.icon-briefcase:before { content: '\e800'; } /* '' */
+.icon-user:before { content: '\e801'; } /* '' */
+.icon-mail:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
+.icon-instagram:before { content: '\f32d'; } /* '' */
