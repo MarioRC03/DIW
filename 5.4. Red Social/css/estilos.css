@@ -24,37 +24,39 @@ header .logo img {
 }
 
 
-header .buscar form input[type="text"] {
+header .buscar .buscador {
+	position: relative;
 	width: 100%;
-	background-color: #fff;
-	border: none;
-	font-size: 12px;
-	padding: 0 10px;
-	height: 25px;
-	line-height: 25px;
-	border-radius: 3px 0 0 3px;
-	color: #6d6d6d;
-	font-family: 'open sans', sans-serif;
-
 }
 
-header .buscar form button {
+header .buscar .buscador input[type="text"],
+header .buscar .buscador .form-control {
 	width: 100%;
-	background-color: #fff;
+	background: #fff;
 	border: none;
 	font-size: 12px;
-	padding: 0 10px;
+	padding: 0 35px 0 10px;
 	height: 25px;
 	line-height: 25px;
-	border-radius: 0 3px 3px 0;
+	border-radius: 3px;
+	color: #6d6d6d;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header .buscar .buscador i {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	color: #6d6d6d;
+	font-size: 12px;
 	cursor: pointer;
-	color: #6d6d6d;
 }
 
-header .buscar form button:hover {
-	background-color: #099efc;
-	color: #fff;
+header .buscar .buscador i:hover {
+	color: #1176b6;
 }
+
 
 
 header .menu {
