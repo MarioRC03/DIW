@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Open+Sans&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scriptconfirmacion.js"></script>
 </head>
 
 <body>
@@ -44,43 +44,27 @@
         </nav>
     </header>
 
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card tarjeta text-center py-5 px-4 shadow">
+                    <i class="icon-ok fs-1 text-success mb-4" style="font-size: 6rem;"></i>
+                    <h1 class="mb-4">¡Cita confirmada!</h1>
+                    <p class="lead mb-4">Tu solicitud se ha registrado correctamente.</p>
 
-    <main>
-        <section class="bg-primary text-white py-5 text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">Cita Previa DNI y Pasaporte</h1>
-                <p class="lead mt-3">Solicita tu cita previa de forma rápida y segura</p>
-                <a href="formularioCita.html" class="btn btn-light btn-lg mt-4 px-5">Pedir cita ahora</a>
-            </div>
-        </section>
-
-        <div class="container py-5">
-            <div class="alert alert-warning alerta-aviso mb-5">
-                <strong>Aviso importante:</strong> Debido a la alta demanda, muchas oficinas tienen pocas citas
-                disponibles para las próximas semanas.
-            </div>
-
-            <h2 class="text-center mb-5">Nuestros trámites</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tarjeta h-100 text-center">
-                        <div class="card-body">
-                            <i class="icon-user fs-1 text-primary mb-3"></i>
-                            <h5 class="card-title">DNI</h5>
-                            <p>Renovación, primera expedición, cambio de datos</p>
-                            <a href="#" class="btn btn-outline-primary">Más información</a>
-                        </div>
+                    <div class="alert alert-info mb-5" id="resumenCita">
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tarjeta h-100 text-center">
-                        <div class="card-body">
-                            <i class="icon-doc-text fs-1 text-primary mb-3"></i>
-                            <h5 class="card-title">Pasaporte</h5>
-                            <p>Solicitud y renovación de pasaporte ordinario</p>
-                            <a href="#" class="btn btn-outline-primary">Más información</a>
-                        </div>
-                    </div>
+
+                    <h5 class="mb-3">Documentación que debes llevar obligatoriamente</h5>
+                    <ul class="list-group list-group-flush mb-5 text-start">
+                        <li class="list-group-item"><i class="icon-picture me-2"></i>Fotografía reciente</li>
+                        <li class="list-group-item"><i class="icon-doc-text me-2"></i>Justificante de pago de tasas</li>
+                        <li class="list-group-item"><i class="icon-user me-2"></i>DNI/NIE anterior (si aplica)</li>
+                        <li class="list-group-item"><i class="icon-building me-2"></i>Certificado de empadronamiento
+                            (solo cambio de domicilio)</li>
+                    </ul>
+
+                    <a href="index.html" class="btn btn-azul btn-lg px-5">Volver al inicio</a>
                 </div>
             </div>
         </div>
@@ -117,6 +101,8 @@
             <p class="text-center mb-0 small">© 2026 Ministerio del Interior - Cuerpo Nacional de Policía</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
