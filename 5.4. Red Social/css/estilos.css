@@ -180,6 +180,16 @@ main .contenido-principal .publicar {
 	margin-bottom: 20px;
 }
 
+.barra-lateral-izquierda {
+    background: #fff;
+
+}
+
+.botonHamburguer{
+	background-color:  #1176b6;
+	border-radius: 1px;
+}
+
 main .contenido-principal .publicar .foto a {
 	width: 60px;
 	height: 60px;
