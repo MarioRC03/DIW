@@ -1,74 +1,107 @@
+
 let pasoActual = 1;
-  let tramite = '';
+let tramite = '';
 
-  function elegir(tr) {
+
+function actualizarProgreso() {
+    const porcentaje = ((pasoActual) / 4) * 100;
+    const progressBar = document.getElementById('progressBar');
+    
+    progressBar.style.width = porcentaje + '%';
+    progressBar.textContent = `Paso ${pasoActual} de 4`;
+}
+
+
+function seleccionarTramite(tr) {
     tramite = tr;
-    avanzar(1);
-  }
+    console.log('Trámite seleccionado:', tramite); 
+    avanzarPaso(1);
+}
 
-  function avanzar(desde) {
+function avanzarPaso(desde) {
     if (desde === 1) {
-      document.getElementById('pasoTramite').classList.remove('activo');
-      document.getElementById('pasoUbicacion').classList.add('activo');
-      document.getElementById('progreso').style.width = '50%';
-      document.getElementById('progreso').textContent = 'Paso 2 de 4';
-      pasoActual = 2;
-    } else if (desde === 2) {
-      if (!document.getElementById('provincia').value || !document.getElementById('oficina').value) {
-        alert('Selecciona provincia y oficina');
-        return;
-      }
-      document.getElementById('pasoUbicacion').classList.remove('activo');
-      document.getElementById('pasoFecha').classList.add('activo');
-      document.getElementById('progreso').style.width = '75%';
-      document.getElementById('progreso').textContent = 'Paso 3 de 4';
-      pasoActual = 3;
-    } else if (desde === 3) {
-      document.getElementById('pasoFecha').classList.remove('activo');
-      document.getElementById('pasoDatos').classList.add('activo');
-      document.getElementById('progreso').style.width = '100%';
-      document.getElementById('progreso').textContent = 'Paso 4 de 4';
-      pasoActual = 4;
+        document.getElementById('paso1').classList.add('d-none');
+        document.getElementById('paso2').classList.remove('d-none');
+        pasoActual = 2;
+        actualizarProgreso();
+    } 
+    else if (desde === 2) {
+        const provincia = document.getElementById('provincia').value;
+        const oficina = document.getElementById('oficina').value;
+        
+        if (!provincia || !oficina) {
+            alert('Por favor, selecciona provincia y oficina');
+            return;
+        }
+        
+        document.getElementById('paso2').classList.add('d-none');
+        document.getElementById('paso3').classList.remove('d-none');
+        pasoActual = 3;
+        actualizarProgreso();
+    } 
+    else if (desde === 3) {
+        const fecha = document.getElementById('fecha').value;
+        const hora = document.getElementById('hora').value;
+        
+        if (!fecha || !hora) {
+            alert('Por favor, selecciona fecha y hora');
+            return;
+        }
+        
+        document.getElementById('paso3').classList.add('d-none');
+        document.getElementById('paso4').classList.remove('d-none');
+        pasoActual = 4;
+        actualizarProgreso();
     }
-  }
+}
 
-  function volver(desde) {
+function volverPaso(desde) {
     if (desde === 2) {
-      document.getElementById('pasoUbicacion').classList.remove('activo');
-      document.getElementById('pasoTramite').classList.add('activo');
-      document.getElementById('progreso').style.width = '25%';
-      document.getElementById('progreso').textContent = 'Paso 1 de 4';
-    } else if (desde === 3) {
-      document.getElementById('pasoFecha').classList.remove('activo');
-      document.getElementById('pasoUbicacion').classList.add('activo');
-      document.getElementById('progreso').style.width = '50%';
-      document.getElementById('progreso').textContent = 'Paso 2 de 4';
-    } else if (desde === 4) {
-      document.getElementById('pasoDatos').classList.remove('activo');
-      document.getElementById('pasoFecha').classList.add('activo');
-      document.getElementById('progreso').style.width = '75%';
-      document.getElementById('progreso').textContent = 'Paso 3 de 4';
+        document.getElementById('paso2').classList.add('d-none');
+        document.getElementById('paso1').classList.remove('d-none');
+        pasoActual = 1;
+        actualizarProgreso();
+    } 
+    else if (desde === 3) {
+        document.getElementById('paso3').classList.add('d-none');
+        document.getElementById('paso2').classList.remove('d-none');
+        pasoActual = 2;
+        actualizarProgreso();
+    } 
+    else if (desde === 4) {
+        document.getElementById('paso4').classList.add('d-none');
+        document.getElementById('paso3').classList.remove('d-none');
+        pasoActual = 3;
+        actualizarProgreso();
     }
-  }
+}
 
-  document.getElementById('formularioCita').addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!this.checkValidity()) {
-      this.classList.add('was-validated');
-      return;
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    actualizarProgreso();
+    
+    document.getElementById('formCita').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!this.checkValidity()) {
+            e.stopPropagation();
+            this.classList.add('was-validated');
+            return;
+        }
 
-    const datos = {
-      tramite: tramite,
-      provincia: document.getElementById('provincia').value,
-      oficina: document.getElementById('oficina').value,
-      fecha: document.getElementById('fecha').value,
-      hora: document.getElementById('hora').value,
-      dni: document.getElementById('dni').value,
-      telefono: document.getElementById('telefono').value,
-      email: document.getElementById('email').value
-    };
+    
+        const datos = {
+            tramite: tramite,
+            provincia: document.getElementById('provincia').value,
+            oficina: document.getElementById('oficina').value,
+            fecha: document.getElementById('fecha').value,
+            hora: document.getElementById('hora').value,
+            dni: document.getElementById('dni').value,
+            telefono: document.getElementById('telefono').value,
+            email: document.getElementById('email').value
+        };
 
-    localStorage.setItem('citaGuardada', JSON.stringify(datos));
-    window.location.href = 'confirmacion.html';
-  });
+        localStorage.setItem('citaGuardada', JSON.stringify(datos));
+      
+        window.location.href = 'confirmacion.html';
+    });
+});

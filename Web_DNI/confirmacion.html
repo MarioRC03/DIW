@@ -13,94 +13,95 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-azul">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="Imgs/Logotipo_del_Ministerio_del_Interior.png" alt="Ministerio del Interior" height="45">
-                    <img src="Imgs/Logotipo_del_Cuerpo_Nacional_de_Policía_de_España.png" alt="Policía Nacional"
-                        height="45" class="ms-3">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="icon-home"></i> Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="formularioCita.html"><i class="icon-calendar"></i> Cita previa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="informacion.html"><i class="icon-info-circled"></i>
-                                Información</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card tarjeta text-center py-5 px-4 shadow">
-                    <i class="icon-ok fs-1 text-success mb-4" style="font-size: 6rem;"></i>
-                    <h1 class="mb-4">¡Cita confirmada!</h1>
-                    <p class="lead mb-4">Tu solicitud se ha registrado correctamente.</p>
-
-                    <div class="alert alert-info mb-5" id="resumenCita">
-                    </div>
-
-                    <h5 class="mb-3">Documentación que debes llevar obligatoriamente</h5>
-                    <ul class="list-group list-group-flush mb-5 text-start">
-                        <li class="list-group-item"><i class="icon-picture me-2"></i>Fotografía reciente</li>
-                        <li class="list-group-item"><i class="icon-doc-text me-2"></i>Justificante de pago de tasas</li>
-                        <li class="list-group-item"><i class="icon-user me-2"></i>DNI/NIE anterior (si aplica)</li>
-                        <li class="list-group-item"><i class="icon-building me-2"></i>Certificado de empadronamiento
-                            (solo cambio de domicilio)</li>
-                    </ul>
-
-                    <a href="index.html" class="btn btn-azul btn-lg px-5">Volver al inicio</a>
-                </div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-azul">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Imgs/Logotipo_del_Ministerio_del_Interior.png" alt="Ministerio del Interior" height="50">
+                <img src="Imgs/Logotipo_del_Cuerpo_Nacional_de_Policía_de_España.png" alt="Policía Nacional" height="50" class="ms-3">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-home me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formularioCita.html"><i class="icon-calendar me-1"></i> Cita previa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html"><i class="icon-info-circled me-1"></i> Información</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </main>
+    </nav>
+</header>
 
-    <footer class="pie-pagina py-5 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>Enlaces legales</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">Política de privacidad</a></li>
-                        <li><a href="#" class="text-white-50">Política de cookies</a></li>
-                        <li><a href="#" class="text-white-50">Aviso legal</a></li>
-                    </ul>
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+            <div class="card shadow-lg border-0 text-center py-5 px-4">
+                <i class="bi bi-check-circle-fill text-success mb-4" style="font-size: 6rem;"></i>
+                <h1 class="mb-4 fw-bold">¡Cita confirmada!</h1>
+                <p class="lead mb-5">Tu solicitud ha sido registrada correctamente.</p>
+
+                <div class="alert alert-info mb-5">
+                    <strong>Detalles de tu cita:</strong><br>
+                    Trámite: <strong>DNI</strong><br>
+                    Oficina: <strong>Comisaría Madrid - Canillas</strong><br>
+                    Fecha: <strong>18 de febrero de 2026</strong><br>
+                    Hora: <strong>10:00</strong><br>
+                    <small class="text-muted mt-2 d-block">Te hemos enviado un correo con todos los detalles y recordatorio.</small>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Enlaces de interés</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.interior.gob.es" target="_blank" class="text-white-50">Ministerio del
-                                Interior</a></li>
-                        <li><a href="https://www.policia.es" target="_blank" class="text-white-50">Policía Nacional</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Redes sociales</h5>
+
+                <h5 class="mb-4">Documentos que debes llevar obligatoriamente:</h5>
+                <ul class="list-group list-group-flush mb-5 text-start">
+                    <li class="list-group-item"><i class="bi bi-camera me-3 text-primary"></i>Fotografía reciente (32×26 mm para DNI / 35×45 mm para pasaporte)</li>
+                    <li class="list-group-item"><i class="bi bi-receipt me-3 text-primary"></i>Justificante de pago de tasas (modelo 790)</li>
+                    <li class="list-group-item"><i class="bi bi-person me-3 text-primary"></i>DNI/NIE anterior (si renovación)</li>
+                    <li class="list-group-item"><i class="bi bi-house-door me-3 text-primary"></i>Certificado de empadronamiento (solo si cambias domicilio)</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-primary btn-lg px-5">Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="pie-pagina py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Enlaces legales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50">Política de privacidad</a></li>
+                    <li><a href="#" class="text-white-50">Política de cookies</a></li>
+                    <li><a href="#" class="text-white-50">Aviso legal</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Enlaces oficiales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.interior.gob.es" target="_blank" class="text-white-50">Ministerio del Interior</a></li>
+                    <li><a href="https://www.policia.es" target="_blank" class="text-white-50">Policía Nacional</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Síguenos</h5>
+                <div class="d-flex justify-content-center justify-content-md-start">
                     <a href="#" class="text-white me-3 fs-4"><i class="icon-twitter"></i></a>
                     <a href="#" class="text-white me-3 fs-4"><i class="icon-facebook"></i></a>
                     <a href="#" class="text-white fs-4"><i class="icon-instagram"></i></a>
                 </div>
             </div>
-            <hr class="border-light opacity-50">
-            <p class="text-center mb-0 small">© 2026 Ministerio del Interior - Cuerpo Nacional de Policía</p>
         </div>
-    </footer>
+        <hr class="border-light opacity-50 mt-4">
+        <p class="text-center mb-0 small">© 2026 Ministerio del Interior - Cuerpo Nacional de Policía</p>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
