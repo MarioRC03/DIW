@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+h1, h2, h3 {
+  color: map-get($colors, dark);
+  margin-bottom: map-get($spacing, md);
+}
+
+h1 { font-size: map-get($font-sizes, h1); }
+h2 { font-size: map-get($font-sizes, h2); }

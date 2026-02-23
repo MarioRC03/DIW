@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.dropdown {
+  position: relative;
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+
+  &-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    list-style: none;
+
+    li a {
+      padding: 12px 16px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        background: #f1f1f1;
+      }
+    }
+  }
+}

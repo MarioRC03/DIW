@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; 
+}
+
+body {
+  font-family: $font-family;
+  color: map-get($colors, text);
+  background: map-get($colors, light);
+  line-height: 1.5;
+}
+
+
+html {
+  @include mq(md) {
+    font-size: 56%;
+  }
+  @include mq(sm) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+h1, h2, .logo {
+  font-family: $font-comic;  
+  font-weight: normal;       
+}
+
+h3, .products-item h3 {
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
+nav, .top-nav {
+  font-family: $font-primary;
+  font-weight: 500;
+}

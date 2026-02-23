@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+header {
+  background: map-get($colors, dark);
+  color: white;
+  padding: map-get($spacing, md) 0;
+
+  .top-bar {
+    @include center-flex(row);
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 map-get($spacing, lg);
+
+    @include mq(lg) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  nav ul {
+    @include center-flex();
+    list-style: none;
+    gap: 2rem;
+
+    @include mq(lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mq(md) {
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: map-get($colors, accent);
+    }
+  }
+}

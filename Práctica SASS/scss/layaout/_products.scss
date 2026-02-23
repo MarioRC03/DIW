@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.products {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  &-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      background: #f8f8f8;
+    }
+
+    .info {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .price {
+        font-weight: bold;
+        color: map-get($colors, primary);
+        margin: 0.5rem 0;
+      }
+
+      .btn {
+        margin-top: 0.8rem;
+      }
+    }
+
+
+    @include mq(sm) {
+      .price, h3 {
+        display: none;
+      }
+      .info {
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.slideshow {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+    transition: transform 0.6s ease;
+    width: 500%;           
+  }
+
+  &-slide {
+    flex: 0 0 20%;        
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @include mq(lg)  { height: 420px; }
+    @include mq(md)  { height: 320px; }
+    @include mq(sm)  { height: 220px; }
+  }
+
+
+  &-dots {
+    @include center-flex();
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    gap: 12px;
+    z-index: 10;
+
+    label {
+      width: 14px;
+      height: 14px;
+      background: rgba(white, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover, &:focus {
+        background: white;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  #slide1:checked ~ .slideshow-container { transform: translateX(0%); }
+  #slide2:checked ~ .slideshow-container { transform: translateX(-20%); }
+  #slide3:checked ~ .slideshow-container { transform: translateX(-40%); }
+
+}
+
