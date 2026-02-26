@@ -1,0 +1,158 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+header {
+  background: white;
+  color: #111;
+  padding: 0.8rem 0 1.2rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 100;
+}
+
+.header-top {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .logo img {
+    height: 55px;
+    width: auto;
+  }
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      color: map.get($colors, "primary");
+    }
+  }
+
+  .search-link { font-weight: bold; }
+  .cart { font-size: 1.3rem; }
+}
+
+.site-title {
+  text-align: center;
+  font-family: $font-comic;
+  font-size: 2.8rem;
+  color: #111;
+  margin: 0.6rem 0 1rem;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  margin: 0.5rem auto 1rem;
+  max-width: 1400px;
+  padding: 0.8rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: white;
+
+  ul {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    li {
+      position: relative;
+    }
+
+    a {
+      color: #222;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      transition: color 0.25s;
+
+      &:hover {
+        color: map.get($colors, "primary");
+      }
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    min-width: 220px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+
+    li a {
+      display: block;
+      padding: 0.7rem 1.4rem;
+      color: #222;
+
+      &:hover {
+        background: #f9f9f9;
+        color: map.get($colors, "primary");
+      }
+    }
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+
+  .hamburger, .menu-toggle {
+    display: none !important;
+  }
+
+  @include mq("lg") {
+    ul {
+      gap: 2.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  @include mq("md") {
+    ul {
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  @include mq("sm") {
+    ul {
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+    }
+  }
+}

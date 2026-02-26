@@ -1,9 +1,0 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-
-.btn {
-  @include button-style();
-  
-  &--primary { @include button-style(map-get($colors, primary)); }
-  &--accent  { @include button-style(map-get($colors, accent), #000); }
-}

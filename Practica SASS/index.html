@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Cómics - Kaboom!</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@700&family=Roboto:wght@400;500;700&display=swap"    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+  <div class="header-top">
+    <div class="logo-section">
+      <a href="#" class="logo">
+        <img src="imgs/logo.png" alt="Kaboom Comics">
+      </a>
+    </div>
+
+    <nav class="top-nav">
+      <a href="#" class="search-link">🔍 Buscar</a>
+      <a href="#">Contacto</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="cart">🛒 (0)</a>
+    </nav>
+  </div>
+
+  <h1 class="site-title">TIENDA DE CÓMICS</h1>
+
+ <nav class="main-nav">
+  <ul>
+    <li><a href="#">Tienda</a></li>
+    <li class="dropdown">
+      <a href="#">Ideas de regalo ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Para él</a></li>
+        <li><a href="#">Para ella</a></li>
+        <li><a href="#">Universo Marvel</a></li>
+        <li><a href="#">Figuras coleccionables</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Sobre Nosotros</a></li>
+    <li><a href="#">Dónde estamos</a></li>
+    <li><a href="#">Novedades</a></li>
+  </ul>
+</nav>
+</header>
+
+  <main>
+    <section class="slideshow">
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+
+      <div class="slideshow-container">
+        <div class="slideshow-slide" style="background-image: url('imgs/img1.jpg');">
+          <div class="caption left-caption">
+            <h2>From Hell</h2>
+            <p class="edition">MASTER EDITION – IN COLOR</p>
+            <p class="author">ALAN MOORE & EDDIE CAMPBELL</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          </div>
+        </div>
+
+        <div class="slideshow-slide" style="background-image: url('imgs/img2.jpg');">
+          <div class="caption left-caption">
+            <h2>Batman: The Killing Joke</h2>
+            <p>Sed do eiusmod tempor incididunt ut labore...</p>
+          </div>
+        </div>
+
+        <div class="slideshow-slide" style="background-image: url('imgs/img4.jpg');">
+          <div class="caption left-caption">
+            <h2>Watchmen</h2>
+            <p>Exercitation ullamco laboris nisi ut aliquip...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slideshow-dots">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2>Figuras de colección</h2>
+
+      <div class="products-grid">
+        <div class="products-item">
+          <img src="imgs/product1.png" alt="Figura Superman">
+          <div class="info">
+            <h3>Superman Classic</h3>
+            <p class="price">89,99 €</p>
+            <a href="#" class="btn btn--primary">Añadir al carrito</a>
+          </div>
+        </div>
+
+        <div class="products-item">
+          <img src="imgs/product2.png" alt="Figura Batman">
+          <div class="info">
+            <h3>Batman Arkham Knight</h3>
+            <p class="price">74,50 €</p>
+            <a href="#" class="btn btn--primary">Añadir al carrito</a>
+          </div>
+        </div>
+
+        <div class="products-item">
+          <img src="imgs/product3.png" alt="Figura Wonder Woman">
+          <div class="info">
+            <h3>Wonder Woman</h3>
+            <p class="price">94,99 €</p>
+            <a href="#" class="btn btn--primary">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+
+      <div class="footer-col footer-info">
+        <h4>Más información</h4>
+        <ul>
+          <li><a href="#">Empresa</a></li>
+          <li><a href="#">Ventas</a></li>
+          <li><a href="#">Donaciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <div class="newsletter-form">
+          <div class="newsletter-row">
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Apellido">
+          </div>
+          <div class="newsletter-row">
+            <input type="email" placeholder="Email">
+            <button type="submit" class="btn-signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Tienda de comics</h4>
+        <ul>
+          <li><a href="#">666 666 666</a></li>
+          <li><a href="#">info@gmail.com</a></li>
+          <li><a href="#">Salamanca, Spain</a></li>
+          <li><a href="#">Envíos gratis con más de 50€</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

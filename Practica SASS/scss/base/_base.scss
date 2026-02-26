@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+
+  @include mq("sm")  { font-size: 93.75%; }
+  @include mq("md")  { font-size: 100%;    }
+  @include mq("lg")  { font-size: 112.5%;  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.5;
+  color: map.get($colors, "text");
+  background-color: #ffffff;          
+}
+
+h1, h2, .logo {
+  font-family: $font-comic;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;        
+  letter-spacing: 1px;
+}
+
+h3, .products-item h3 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+nav, .top-nav {
+  font-family: $font-primary;
+  font-weight: 500;
+}

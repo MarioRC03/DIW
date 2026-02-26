@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "sass:map";
+@use "sass:color";
+
+@mixin mq($key) {
+  @if map.has-key($breakpoints, $key) {
+    $bp-value: map.get($breakpoints, $key);
+    @media screen and (min-width: $bp-value) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint desconocido: #{$key}. Disponibles: #{map.keys($breakpoints)}";
+  }
+}
+
+@mixin button-style($bg: map.get($colors, "primary"), $color: white) {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  background: $bg;
+  color: $color;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.2s;
+
+  &:hover {
+    background: color.adjust($bg, $lightness: -10%);
+    transform: translateY(-1px);
+  }
+}
+
+@mixin center-flex($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}

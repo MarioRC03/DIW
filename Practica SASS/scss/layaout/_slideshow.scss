@@ -1,0 +1,106 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.slideshow {
+  position: relative;
+  height: 65vh;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #111;
+}
+
+.slideshow h1 {
+  display: none; 
+}
+
+.slideshow-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  width: 300%;
+}
+
+.slideshow-slide {
+  flex: 0 0 33.333%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+  }
+}
+
+.left-caption {
+  position: relative;
+  z-index: 10;
+  max-width: 50%;
+  margin-left: 6%;
+  color: white;
+  padding: 2rem;
+  background: rgba(0,0,0,0.5);
+  border-left: 6px solid map.get($colors, "primary");
+
+  h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px #000;
+  }
+
+  .edition {
+    font-size: 1.6rem;
+    color: map.get($colors, "accent");
+    margin: 0.5rem 0;
+  }
+
+  .author {
+    font-size: 1.3rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 15;
+
+  label {
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover, &:focus {
+      background: white;
+    }
+  }
+}
+
+input[type="radio"] { display: none; }
+
+#slide1:checked ~ .slideshow-container { transform: translateX(0%); }
+#slide2:checked ~ .slideshow-container { transform: translateX(-33.333%); }
+#slide3:checked ~ .slideshow-container { transform: translateX(-66.666%); }

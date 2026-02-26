@@ -1,0 +1,129 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:map";
+
+footer {
+  background: map.get($colors, "dark");
+  color: white;
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+
+    @include mq("lg") {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .footer-col {
+    flex: 1;
+
+    h4 {
+      font-family: $font-comic;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li { margin-bottom: 0.5rem; }
+
+      a {
+        color: #ccc;
+        text-decoration: underline;
+        font-size: 0.95rem;
+
+        &:hover { color: map.get($colors, "accent"); }
+      }
+    }
+  }
+
+  .footer-newsletter {
+    p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .newsletter-row {
+      display: flex;
+      gap: 0.5rem;
+
+      input {
+        flex: 1;
+        padding: 0.55rem 0.8rem;
+        border: 1px solid #555;
+        background: white;
+        color: #222;
+        font-size: 0.9rem;
+        border-radius: 2px;
+        outline: none;
+
+        &::placeholder { color: #999; }
+        &:focus { border-color: map.get($colors, "primary"); }
+      }
+    }
+
+    .btn-signup {
+      padding: 0.55rem 1.2rem;
+      background: #444;
+      color: white;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 2px;
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        background: map.get($colors, "primary");
+      }
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin: 1.8rem auto 0.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #333;
+    max-width: 1200px;
+    width: 100%;
+
+    a {
+      color: #ccc;
+      font-size: 1.4rem;
+      text-decoration: none;
+
+      &:hover { color: map.get($colors, "accent"); }
+    }
+  }
+
+  .copyright {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+  }
+}
